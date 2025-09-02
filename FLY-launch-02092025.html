@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OraiGo Flyer - A5</title>
+  <style>
+    /* Printable A5 layout */
+    @page { size: A5 portrait; margin: 10mm }
+    html,body{height:100%;margin:0;padding:0;font-family: 'Helvetica Neue', Arial, sans-serif;background:#fff}
+
+    .flyer {
+      box-sizing: border-box;
+      width: 148mm; /* A5 width */
+      height: 210mm; /* A5 height */
+      padding: 18mm;
+      color:#222;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .brand {
+      text-align:center;
+    }
+    .brand h1{
+      margin:0;font-size:28px;color:#27ae60;letter-spacing:1px
+    }
+    .brand p{margin:6px 0 0;font-size:14px;color:#333}
+
+    .offer-box{
+      width:100%;
+      background:linear-gradient(90deg,#f6f9f6,#fffef6);
+      border:2px solid #f0f0f0;
+      padding:12px 14px;
+      border-radius:8px;
+      text-align:center;
+      box-shadow:0 4px 12px rgba(0,0,0,0.04);
+      margin-top:12px;
+    }
+    .offer-box .title{font-weight:700;color:#e67e22;font-size:16px}
+    .offer-box .lines{font-size:13px;margin-top:8px;color:#222}
+
+    .middle {
+      display:flex;
+      width:100%;
+      gap:14px;
+      margin-top:14px;
+    }
+
+    .left-col{flex:1}
+    .right-col{width:95mm;flex-shrink:0}
+
+    .cta{
+      display:block;margin-top:12px;padding:10px 14px;border-radius:8px;background:#27ae60;color:#fff;text-decoration:none;font-weight:700;text-align:center}
+
+    .qr-box{
+      width:95mm;height:95mm;border:2px dashed #ccc;border-radius:6px;display:flex;align-items:center;justify-content:center;background:#fafafa
+    }
+    .qr-box small{display:block;color:#666;font-size:12px}
+
+    .footer{
+      width:100%;display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding-top:8px;border-top:1px dashed #eee;font-size:12px;color:#444
+    }
+
+    .badge{display:inline-block;background:#f1f8f1;color:#27ae60;padding:6px 8px;border-radius:6px;font-weight:700}
+
+    /* Back-like section (optional) */
+    .back {
+      width:100%;margin-top:18px;padding:12px;border-radius:8px;border:1px solid #f2f2f2;background:#fff
+    }
+    .back h3{margin:0 0 8px 0;color:#333}
+    .steps{display:flex;gap:10px}
+    .step{flex:1;background:#fafafa;padding:8px;border-radius:6px;font-size:12px;min-height:56px}
+
+    /* Print tweaks */
+    @media print{
+      body{background:#fff}
+      .flyer{box-shadow:none}
+      a.copyright{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="flyer" role="document" aria-label="OraiGo A5 Flyer">
+
+    <div class="brand">
+      <h1>OraiGo 🛒</h1>
+      <p>Groceries at your doorstep in Orai — Fresh • Fast • Affordable</p>
+
+      <div class="offer-box" role="region" aria-label="Launch offer">
+        <div class="title">🎉 LAUNCH OFFER</div>
+        <div class="lines">₹100 OFF on ₹499+ orders &nbsp; (Code: <strong>LAUNCH100</strong>)</div>
+        <div class="lines">🚚 Free Delivery on ₹299+ (Week 1 only)</div>
+      </div>
+    </div>
+
+    <div class="middle" role="main">
+      <div class="left-col">
+        <div style="font-weight:700;color:#333;margin-bottom:8px">Cash on Delivery Available 💵</div>
+
+        <div style="font-size:13px;color:#444;line-height:1.35">Simple packaging for now — sturdy carry bags + OraiGo sticker. Pay on delivery & enjoy fresh groceries at home. Perfect for families and working professionals in Orai.</div>
+
+        <a class="cta" href="#order">📲 ORDER NOW — Scan QR or WhatsApp</a>
+
+        <div style="margin-top:10px;font-size:12px;color:#666">Tip: Reply <strong>YES</strong> on WhatsApp to place your order quickly.</div>
+
+        <div class="back">
+          <h3>How to Order</h3>
+          <div class="steps">
+            <div class="step">1. Scan the QR or open <br><strong>www.oraigo.in</strong></div>
+            <div class="step">2. Choose items from catalog or send list on WhatsApp</div>
+            <div class="step">3. Get same-day delivery — Pay Cash on Delivery</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="right-col" aria-label="QR code">
+        <div class="qr-box">
+          <div style="text-align:center;">
+            <div style="width:72px;height:72px;border:2px solid #ccc;display:inline-block;">QR</div>
+            <small style="margin-top:8px;display:block">Scan to Order / WhatsApp</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+      <div>
+        <div class="badge">Free Delivery ₹299+</div>
+      </div>
+      <div style="text-align:right">
+        <div>🌐 <strong>www.oraigo.in</strong></div>
+        <div>📲 WhatsApp: <strong>+91-98765 43210</strong></div>
+        <div style="font-size:11px;color:#888;margin-top:6px">Serving Orai city & nearby</div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
