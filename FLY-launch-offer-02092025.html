@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>OraiGo - Starter Bundles (A5 Flyer)</title>
+<style>
+  /* A5 print-friendly layout */
+  @page { size: A5; margin: 10mm; }
+  html,body { height:100%; margin:0; padding:0; font-family: "Helvetica Neue", Arial, sans-serif; background:#ffffff; color:#222; }
+  .page {
+    width:148mm; height:210mm;
+    box-sizing:border-box;
+    padding:14mm;
+    display:flex; flex-direction:column; justify-content:space-between;
+  }
+
+  /* Header / logo */
+  .header { display:flex; align-items:center; gap:12px; }
+  .brand-logo { width:64px; height:64px; flex:0 0 64px; }
+  .brand-title { font-size:24px; font-weight:700; color:#27ae60; margin:0; line-height:1; }
+  .brand-sub { margin:2px 0 0; font-size:12px; color:#555; }
+
+  /* Offer strip */
+  .offer {
+    margin-top:10px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:linear-gradient(90deg,#fffaf0,#fefcf6);
+    border:1px solid #f2e6d2;
+    padding:10px;
+    border-radius:8px;
+  }
+  .offer .left { font-weight:700; color:#e67e22; font-size:14px; }
+  .offer .right { text-align:right; font-size:12px; color:#333; }
+
+  /* Content */
+  .content { display:flex; gap:12px; margin-top:12px; }
+  .left { flex:1; }
+  .right { width:82mm; flex-shrink:0; display:flex; align-items:center; justify-content:center; }
+
+  /* Bundles */
+  .bundle { background:#fbfbfb; border:1px solid #eee; padding:10px; border-radius:8px; margin-bottom:10px; }
+  .bundle h3 { margin:0 0 6px 0; font-size:13px; color:#2c3e50; }
+  .items { font-size:11px; color:#444; margin-bottom:8px; line-height:1.35; }
+  .price { display:inline-block; background:#e74c3c; color:#fff; padding:6px 8px; border-radius:6px; font-weight:700; font-size:11px; float:right; }
+
+  /* QR box */
+  .qr-box { width:72mm; height:72mm; border:2px dashed #ccc; border-radius:6px; display:flex; align-items:center; justify-content:center; background:#fff; }
+  .qr-text { font-size:11px; color:#666; text-align:center; }
+
+  /* CTA / footer */
+  .cta { display:inline-block; text-decoration:none; background:#27ae60; color:#fff; padding:10px 12px; border-radius:8px; font-weight:700; margin-top:10px; }
+  .footer { display:flex; justify-content:space-between; align-items:center; margin-top:14px; padding-top:8px; border-top:1px dashed #eee; font-size:11px; color:#444; }
+  .badge { background:#f1f8f1; color:#27ae60; padding:6px 8px; border-radius:6px; font-weight:700; font-size:12px; }
+
+  /* Back/How-to */
+  .how { margin-top:8px; background:#fff; border:1px solid #f3f3f3; padding:8px; border-radius:6px; font-size:12px; color:#444; }
+  .steps { display:flex; gap:6px; margin-top:6px; }
+  .step { flex:1; background:#fafafa; border-radius:6px; padding:6px; font-size:11px; text-align:center; }
+
+  /* Print adjustments */
+  @media print {
+    .page { padding:6mm; }
+    a { color:inherit; text-decoration:none; }
+  }
+</style>
+</head>
+<body>
+  <div class="page" role="document" aria-label="OraiGo Starter Bundles Flyer">
+    <!-- Header -->
+    <header class="header">
+      <!-- Embedded SVG logo (replace with your logo file if needed) -->
+      <div class="brand-logo" aria-hidden="true">
+        <svg viewBox="0 0 100 100" width="64" height="64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="OraiGo logo">
+          <rect width="100" height="100" rx="14" fill="#27ae60"/>
+          <g transform="translate(12,16)" fill="#ffffff">
+            <path d="M6 48 L18 22 L30 48 Z" opacity="0.15"/>
+            <path d="M6 52 L18 26 L30 52 Z" opacity="0.07"/>
+            <circle cx="70" cy="60" r="6" fill="#fff"/>
+            <!-- simple cart icon -->
+            <path d="M8 34h46l-6 18H18z" fill="#fff"/>
+            <circle cx="30" cy="70" r="4" fill="#1b9a58"/>
+            <circle cx="66" cy="70" r="4" fill="#1b9a58"/>
+          </g>
+        </svg>
+      </div>
+
+      <div>
+        <h1 class="brand-title">OraiGo</h1>
+        <div class="brand-sub">Fresh groceries delivered in Orai — Fast • Affordable</div>
+      </div>
+    </header>
+
+    <!-- Offer -->
+    <div class="offer" role="region" aria-label="Launch offer">
+      <div class="left">🎉 LAUNCH OFFER</div>
+      <div class="right">
+        <div style="font-weight:700">₹100 OFF on ₹499+ <span style="font-weight:400">(Code: <strong>LAUNCH100</strong>)</span></div>
+        <div style="font-size:12px;color:#666">Free delivery on ₹299+ (Week 1 only)</div>
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="content" role="main">
+      <div class="left">
+        <!-- Bundles -->
+        <div class="bundle" aria-labelledby="b1">
+          <h3 id="b1">Daily Essentials Pack <span class="price">Approx. ₹650</span></h3>
+          <div class="items">Wheat Atta 2kg, Rice 2kg, Toor Dal 1kg, Sugar 1kg, Salt 1kg, Turmeric 200g, Mustard Oil 1L</div>
+          <div style="clear:both"></div>
+          <div style="font-size:11px;color:#777">Perfect for a small family's 2–3 day staples. Save ~7% vs buying separately.</div>
+        </div>
+
+        <div class="bundle" aria-labelledby="b2">
+          <h3 id="b2">Breakfast & Dairy Pack <span class="price">Approx. ₹380</span></h3>
+          <div class="items">Milk 2×500ml, Curd 500g, Bread 400g, Butter 100g, Eggs (6), Tea 250g</div>
+          <div style="clear:both"></div>
+          <div style="font-size:11px;color:#777">Quick breakfast essentials — ready to deliver.</div>
+        </div>
+
+        <div class="bundle" aria-labelledby="b3">
+          <h3 id="b3">Snacks & Kids Pack <span class="price">Approx. ₹275</span></h3>
+          <div class="items">Parle-G (Large), Marie Biscuits, Chips 2×100g, Namkeen 400g, Glucon-D 500g</div>
+          <div style="clear:both"></div>
+          <div style="font-size:11px;color:#777">Ideal for tea-time & school snacks.</div>
+        </div>
+
+        <a class="cta" href="#" id="order-cta" aria-label="Order Now (WhatsApp)">📲 Order Now — Scan QR or WhatsApp</a>
+
+        <div class="how" aria-labelledby="how-to">
+          <h4 id="how-to" style="margin:0 0 6px 0">How to Order</h4>
+          <div class="steps" role="list">
+            <div class="step" role="listitem">Scan QR or visit <strong>www.oraigo.in</strong></div>
+            <div class="step" role="listitem">Choose a bundle or send your list on WhatsApp</div>
+            <div class="step" role="listitem">Same-day delivery • Cash on Delivery</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="right" aria-label="QR Code and contact">
+        <!-- QR placeholder - replace with real QR image or link -->
+        <a href="#" title="Scan to order or WhatsApp" style="text-decoration:none;color:inherit">
+          <div class="qr-box" role="img" aria-label="QR code to order">
+            <!-- Simple SVG placeholder for QR -->
+            <svg width="68" height="68" viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="68" height="68" fill="#fff"/>
+              <rect x="4" y="4" width="20" height="20" fill="#eee"/>
+              <rect x="44" y="4" width="20" height="20" fill="#eee"/>
+              <rect x="4" y="44" width="20" height="20" fill="#eee"/>
+              <rect x="28" y="28" width="12" height="12" fill="#ccc"/>
+            </svg>
+            <div class="qr-text" style="margin-top:8px">Scan to Order / WhatsApp</div>
+          </div>
+        </a>
+      </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="badge">Free Delivery ₹299+</div>
+      <div style="text-align:right">
+        <div>🌐 <strong>www.oraigo.in</strong></div>
+        <div>📲 WhatsApp: <strong>+91-98765 43210</strong></div>
+        <div style="font-size:11px;color:#777;margin-top:6px">Serving Orai city & nearby • COD available</div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Notes for editor (not printed): -->
+  <!-- Replace the SVG logo block with your actual logo:
+       <img src="assets/oraigo-logo.svg" width="64" height="64" alt="OraiGo logo" />
+       Replace the QR placeholder anchor href="#" with your wa.me link or a direct QR image.
+       Example WhatsApp link: https://wa.me/919876543210?text=Hi%20OraiGo -->
+</body>
+</html>
